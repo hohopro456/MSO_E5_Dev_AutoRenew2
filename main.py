@@ -45,7 +45,7 @@ def get_access_token(refresh_token, client_id, client_secret):
         'refresh_token': refresh_token,
         'client_id': client_id,
         'client_secret': client_secret,
-        'redirect_uri': 'http://localhost:53682/'
+        'redirect_uri': 'https://e5.thecaduceus.eu.org/auth/'
     }
     html = requests.post('https://login.microsoftonline.com/common/oauth2/v2.0/token', data=data, headers=headers)
     jsontxt = json.loads(html.text)
